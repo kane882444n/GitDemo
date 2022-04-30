@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
-    Button button;
+    Button button, button1;
     public int number = 0;
 
     @Override
@@ -18,12 +18,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.buttonadd);
+        button1 = findViewById(R.id.buttonSub);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textView.setText(String.valueOf(number++));
             }
-        });
 
+        });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setText(String.valueOf(number--));
+            }
+
+        });
     }
 }
