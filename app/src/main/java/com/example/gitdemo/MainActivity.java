@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textView.setText(String.valueOf(number++));
             }
+            //這是加號
 
         });
         button1.setOnClickListener(new View.OnClickListener() {
